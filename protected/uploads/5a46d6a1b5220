@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<style>
+			body {
+				text-align: center;
+			}
+			
+			.pole-container {
+				display: inline-block;
+				width: 300px;
+				height: 800px;
+				border: 1px solid black;
+				position: relative;
+				border-radius: 15px;
+			}
+			
+			.pole {
+				position: absolute;
+				width: 100%;
+				bottom: 0px;
+			}
+			
+			.disk > div {
+				border-radius: 15px;
+			}
+			
+			.title {
+				text-align: center;
+				font-size: 40px;
+				padding: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			Click On Something
+		</div>
+		
+		<div class="content">
+			<div class="pole-container">
+				<div class="pole a"></div>
+			</div>
+			
+			<div class="pole-container">
+				<div class="pole b"></div>
+			</div>
+			
+			<div class="pole-container">
+				<div class="pole c"></div>
+			</div>
+		</div>
+		
+		<script src="jquery.min.js"></script>
+		<script>
+			$(function() {
+				var working = false;
+				var $title = $('.title');
+				var $a = $('.pole-container:nth-child(1) .pole');
+				var $b = $('.pole-container:nth-child(2) .pole');
+				var $c = $('.pole-container:nth-child(3) .pole');
+				
+				var height = 10;
+				var speed = 5;
+				
+				for(var i = 1; i <= height; i++)
+				{
+					$a.prepend(getDisk(i));
+				}
+				
+				$('body').live('click', function() {
+					if(working)
+					{
+						return;
+					}
+					
+					working = true;
+					$title.html('Working...');
+					var steps = [];
+					tower(height, $a, $c, $b, steps);
+					var i = 0;
+					show(i, steps);
+				});
+				
+				function tower(height, $from, $to, $by, steps)
+				{
+					if(height >= 1)
+					{
+						tower(height - 1, $from, $by, $to, steps);
+						steps.push({ type: 'move', from: $from, to: $to });
+						tower(height - 1, $by, $to, $from, steps);
+					}
+				}
+					
+				function getDisk(height)
+				{
+					var bgColor = 'rgb(' + random(0, 255) + ', ' + random(0, 255) + ', ' + random(0, 255) + ')';
+					
+					html = '';
+					
+					html += '<div class="disk" style="text-align: center;">';
+					html += '	<div style="display: inline-block; height: 80px; width: ' + (300 - ((height - 1) * 20)) + 'px; background: ' + bgColor + ';"></div>';
+					html += '</div>';
+					
+					return $(html);
+				}
+				
+				function show(i, steps)
+				{
+					setTimeout(function() {
+						if(steps[i])
+						{
+							steps[i].to.prepend(steps[i].from.find('.disk').first());
+							show(i + 1, steps);
+						}
+						
+						!steps[i + 1] && $title.html('Done!');
+					}, speed);
+				}
+			});
+			
+			function random(min, max)
+			{
+				return Math.floor(Math.random() * max) + min;
+			}
+		</script>
+	</body>
+</html>

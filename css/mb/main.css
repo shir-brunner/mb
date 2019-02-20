@@ -1,0 +1,307 @@
+@font-face {
+    font-family: "Assistant";
+    src: url('../public/fonts/Assistant-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Assistant";
+    src: url('../public/fonts/Assistant-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Assistant Semi Bold";
+    src: url('../public/fonts/Assistant-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Assistant Light";
+    src: url('../public/fonts/Assistant-Light.ttf');
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style : normal;
+    src: url("../fonts/fontawesome-webfont.woff2");
+}
+
+#menu-profile-picture {
+    width: 48px;
+    height: 48px;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+table tr:first-child .up-button, table tr:last-child .down-button {
+    display: none;
+}
+
+#product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#product-icon, #product-hover-icon {
+    width: 100%;
+    height: 100%;
+}
+
+#form .section {
+    font-size: 0px;
+}
+
+#form .section-group .section:first-child {
+    padding-right: 37px;
+}
+
+#form .section-group .section:last-child {
+    margin-top: 20px;
+    padding-right: 37px;
+}
+
+#form .section-title {
+    text-align: right;
+    font-family: "Assistant Semi Bold";
+    font-size: 30px;
+    color: #30BEFF;
+    direction: rtl;
+}
+
+#form input, #form select {
+    height: 33px;
+    border-radius: 4px;
+    border: 1px solid #B3B3B3;
+    direction: rtl;
+    padding-right: 10px;
+    font-family: "Assistant";
+    font-size: 15px;
+    color: #4C4C59;
+    margin-left: 14px;
+}
+
+#form input:first-child {
+    margin-left: 0px;
+}
+
+#form .input-55 { width: 55px; }
+#form .input-90 { width: 90px; }
+#form .input-110 { width: 110px; }
+#form .input-130 { width: 130px; }
+#form .input-133 { width: 133px; }
+#form .input-136 { width: 136px; }
+#form .input-154 { width: 154px; }
+#form .input-192 { width: 192px; }
+#form .input-221 { width: 221px; }
+#form .input-418 { width: 418px; }
+#form .input-427 { width: 427px; }
+
+.m-b-13 { margin-bottom: 13px; }
+.m-b-14 { margin-bottom: 14px; }
+.m-b-15 { margin-bottom: 15px; }
+.m-b-17 { margin-bottom: 17px; }
+.m-b-23 { margin-bottom: 23px; }
+.m-b-24 { margin-bottom: 24px; }
+.m-b-28 { margin-bottom: 28px; }
+.m-b-35 { margin-bottom: 35px; }
+
+.m-t-13 { margin-top: 13px; }
+.m-t-14 { margin-top: 14px; }
+.m-t-15 { margin-top: 15px; }
+.m-t-17 { margin-top: 17px; }
+.m-t-23 { margin-top: 23px; }
+.m-t-24 { margin-top: 24px; }
+.m-t-28 { margin-top: 28px; }
+.m-t-35 { margin-top: 35px; }
+
+.p-t-13 { padding-top: 13px; }
+.p-t-14 { padding-top: 14px; }
+.p-t-15 { padding-top: 15px; }
+.p-t-17 { padding-top: 17px; }
+.p-t-23 { padding-top: 23px; }
+.p-t-24 { padding-top: 24px; }
+.p-t-28 { padding-top: 28px; }
+.p-t-35 { padding-top: 35px; }
+
+.m-l-0 { margin-left: 0px !important; }
+.m-l-5 { margin-left: 5px !important; }
+.m-l-7 { margin-left: 7px !important; }
+.m-l-8 { margin-left: 8px !important; }
+.m-l-9 { margin-left: 9px !important; }
+.m-l-10 { margin-left: 10px !important; }
+.m-l-14 { margin-left: 14px !important; }
+.m-l-15 { margin-left: 15px !important; }
+.m-l-17 { margin-left: 17px !important; }
+
+.m-r-0 { margin-right: 0px !important; }
+.m-r-5 { margin-right: 5px !important; }
+.m-r-7 { margin-right: 7px !important; }
+.m-r-10 { margin-right: 10px !important; }
+.m-r-14 { margin-right: 14px !important; }
+.m-r-15 { margin-right: 15px !important; }
+.m-r-17 { margin-right: 17px !important; }
+
+.height-149 { height: 149px; }
+.height-114 { height: 114px; }
+.height-50 { height: 50px; }
+
+.no-h-padding {  padding-left: 0px; padding-right: 0px; }
+
+.fs-16 { font-size: 16px; }
+.fs-10 { font-size: 10px; }
+.fs-11 { font-size: 11px; }
+.fs-12 { font-size: 12px; }
+.fs-14 { font-size: 14px; }
+
+.vt { vertical-align: top; }
+
+#form .section-text {
+    font-family: "Assistant";
+    font-size: 18px;
+    color: #4C4C59;
+    direction: rtl;
+}
+
+#form .section-text input, #form .section-text select {
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.product-step:not(.active) {
+    display: none;
+}
+
+#form input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: white;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: middle;
+    border: 1px solid #4C4C59;
+    margin-top: -2px;
+}
+
+#form input[type="checkbox"]:checked::before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    margin-right: -11px;
+    display: block;
+    margin-top: -2px;
+}
+
+#form .checkbox-list input[type="checkbox"] {
+    margin-left: 3px; /* ? */
+}
+
+#form label {
+    direction: rtl;
+}
+
+#form input.text-center {
+    padding-right: 0px;
+}
+
+#form .section-sub-title {
+    direction: rtl;
+    font-family: "Assistant Semi Bold";
+    font-size: 20px;
+}
+
+#form .checkbox-list {
+    font-size: 14px;
+}
+
+#form .checkbox-list label {
+    margin-left: 29px;
+}
+
+#form textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #B3B3B3;
+    direction: rtl;
+    padding-right: 10px;
+    font-family: "Assistant";
+    font-size: 15px;
+    color: #4C4C59;
+}
+
+#form a {
+    text-decoration: underline;
+    color: #4C4C59;
+}
+
+#form .button {
+    cursor: pointer;
+    height: 33px;
+    border-radius: 4px;
+    background: #4C4C59;
+    color: white;
+    padding-top: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 16px;
+}
+
+#form input.error,
+#form select.error,
+#form textarea.error,
+#form label.error input {
+    border: 1px solid red;
+}
+
+#form label.error, #form label.error a {
+    color: red;
+}
+
+#form .upload-area .files .pending,
+#form .upload-area .files .file {
+    margin-top: 10px;
+}
+
+#form .upload-area .files .pending {
+    direction: rtl;
+}
+
+#form .upload-area .file .delete-button {
+    display: none;
+}
+
+#form .upload-area .file:hover .delete-button {
+    display: inline-block;
+}
+
+#form {
+    color: #4C4C59;
+    font-family: "Assistant";
+}
+
+#form .upload-area .files .pending,
+#form .upload-area .files .file {
+    margin-top: 10px;
+}
+
+#form .upload-area .files .pending {
+    direction: rtl;
+}
+
+#form .upload-area .file .delete-button {
+    display: none;
+}
+
+#form .upload-area .file:hover .delete-button {
+    display: inline-block;
+}
+
+.inline-block { display: inline-block; }
+
+#form .button.disabled {
+    opacity: 0.3;
+    cursor: context-menu;
+}

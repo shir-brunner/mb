@@ -1,0 +1,1297 @@
+@font-face {
+    font-family: "Assistant";
+    src: url('fonts/Assistant-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Assistant";
+    src: url('fonts/Assistant-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Assistant Semi Bold";
+    src: url('fonts/Assistant-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Assistant Light";
+    src: url('fonts/Assistant-Light.ttf');
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style : normal;
+    src: url("../fonts/fontawesome-webfont.woff2");
+}
+
+body {
+    color: #4C4C59;
+    font-family: "Assistant";
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+.text-blue {
+    color: #30BEFF;
+}
+
+.text-red {
+    color: red;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.bold {
+    font-family: "Assistant Semi Bold";
+}
+
+#top-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    -webkit-transition: background .5s ease-out;
+    -moz-transition: background .5s ease-out;
+    -o-transition: background .5s ease-out;
+    transition: background .5s ease-out;
+}
+
+#top-bar.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#top-bar.scrolled .container {
+    border-bottom: none !important;
+}
+
+#top-bar .container.bottom-line {
+    border-bottom: 1px solid #4C4C59;
+}
+
+#top-bar .container {
+    height: 130px;
+    padding-top: 58px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#top-search {
+    width: 284px;
+    border-radius: 15px;
+    border: 1px solid #30BEFF;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 31px;
+    display: table;
+    float: left;
+    font-size: 15px;
+}
+
+#top-search .cell {
+    display: table-cell;
+    padding-right: 5px;
+}
+
+#top-search input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+}
+
+#top-search img {
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+#logo {
+    float: right;
+    width: 183px;
+}
+
+#nav {
+    font-size: 18px;
+    float: right;
+    width: 568px;
+    height: 31px;
+    text-align: center;
+}
+
+#nav .item {
+    margin-left: 13px; /* ? */
+    margin-right: 13px; /* ? */
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+    color: #4C4C59;
+}
+
+#nav .item.active, #nav .item:hover, #nav .item:focus {
+    border-bottom: 2px solid #30BEFF;
+    text-decoration: none;
+}
+
+#top-section {
+    min-height: 1081px;
+    height: 100vh;
+    background-image: url('../../images/public/main_bg.jpg');
+    background-size: cover;
+}
+
+#top-bar-space {
+    height: 130px;
+}
+
+#top-section .title {
+    margin-top: 252px;
+    text-align: center;
+}
+
+#top-section h1 {
+    font-family: "Assistant Light";
+    font-size: 82px;
+    direction: rtl;
+    width: 907px;
+    height: 194px;
+    display: inline-block;
+}
+
+#top-section .services-btn {
+    width: 288px;
+    height: 61px;
+    font-family: "Assistant Semi Bold";
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid #30BEFF;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #30BEFF;
+}
+
+#top-section .services-btn:hover {
+    background: white;
+}
+
+#top-section .down-arrow {
+    width: 38px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 182px;
+}
+
+#how-it-works {
+    padding-top: 53px;
+    padding-bottom: 58px;
+}
+
+#how-it-works .title {
+    text-align: center;
+}
+
+#how-it-works .title h2 {
+    direction: rtl;
+    height: 46px;
+    font-family: "Assistant Semi Bold";
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+#how-it-works .sub-title {
+    text-align: center;
+    margin-top: 16px;
+}
+
+#how-it-works .sub-title h3 {
+    height: 17px;
+    width: 501px;
+    font-family: "Assistant Light";
+    font-size: 15px;
+    direction: rtl;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+#how-it-works .steps {
+    margin-top: 27.5px;
+    text-align: center;
+}
+
+#how-it-works .step {
+    width: 182px;
+    margin-left: 35px;
+    margin-right: 35px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#how-it-works .step .number {
+    margin-bottom: 20px;
+    border: 1px solid #30BEFF;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    font-family: "Assistant Semi Bold";
+    font-size: 18px;
+    color: #30BEFF;
+}
+
+#how-it-works .step img {
+    width: 84px;
+    height: 84px;
+}
+
+#how-it-works .step .header {
+    font-family: "Assistant Semi Bold";
+    font-size: 18px;
+    margin-top: 20px; /* ? */
+}
+
+#how-it-works .step .text {
+    font-family: "Assistant Light";
+    font-size: 15px;
+    margin-top: 10px; /* ? */
+}
+
+#how-it-works .help-text {
+    margin-top: 42px;
+    font-family: "Assistant Semi Bold";
+    font-size: 15px;
+    direction: rtl;
+}
+
+#services {
+    background-image: url('../../images/public/services_bg.jpg');
+    background-size: cover;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    color: white;
+    text-align: center;
+}
+
+#services .right-col {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#services .space {
+    width: 160px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#services .left-col {
+    display: inline-block;
+    width: 490px;
+    vertical-align: top;
+}
+
+#services .right-col .text {
+    font-family: "Assistant Semi Bold"; /* ? */
+    font-size: 40px; /* ? */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#services .right-col img {
+    width: 239px;
+}
+
+#services .item {
+    border-bottom: 1px solid #B3B3B3;
+    overflow-y: hidden;
+    padding-bottom: 20px; /* ? */
+    margin-bottom: 20px;
+}
+
+#services .item:last-child {
+    border-bottom: none;
+}
+
+#services .item .texts {
+    float: right;
+    width: 320px;
+    text-align: right;
+}
+
+#services .item .header {
+    font-family: "Assistant Semi Bold";
+    font-size: 25px;
+}
+
+#services .item .desc {
+    font-family: "Assistant Light";
+    font-size: 15px;
+    direction: rtl;
+}
+
+#services .item .button {
+    float: left;
+    width: 145px;
+    height: 44px;
+    font-family: "Assistant";
+    font-size: 20px;
+    background: #30BEFF;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px; /* ? */
+    padding-top: 5px; /* ? */
+    color: white;
+}
+
+#about {
+    text-align: right;
+}
+
+#about .left-col {
+    display: inline-block;
+    width: 490px;
+    vertical-align: top;
+}
+
+#about .right-col {
+    display: inline-block;
+    width: 490px;
+    vertical-align: top;
+    padding-left: 138px;
+    padding-top: 104px;
+    padding-bottom: 104px;
+    text-align: left;
+}
+
+#about .text {
+    font-family: "Assistant Light";
+    font-size: 15px;
+    direction: rtl;
+    margin-top: 77px;
+    margin-bottom: 77px;
+}
+
+#about .title {
+    font-family: "Assistant Semi Bold";
+    font-size: 70px;
+    color: #30BEFF;
+    direction: rtl;
+    display: inline-block;
+}
+
+#contact {
+    text-align: center;
+    background-image: url('../../images/public/contact_bg.jpg');
+    background-size: cover;
+}
+
+#contact .left-col {
+    display: inline-block;
+    width: 490px;
+    vertical-align: top;
+    margin-top: 68px;
+    margin-right: 16.5px;
+    text-align: left;
+}
+
+#contact .right-col {
+    display: inline-block;
+    width: 490px;
+    vertical-align: top;
+    margin-top: 50px; /* ? */
+    text-align: right;
+    margin-left: 16.5px;
+    margin-bottom: 60px;
+}
+
+#contact .right-col .title {
+    font-family: "Assistant Semi Bold";
+    font-size: 40px;
+    direction: rtl;
+}
+
+#google-map {
+    width: 490px;
+    height: 207px;
+    background: #4C4C59;
+    margin-top: 10px; /* ? */
+    border-radius: 4px;
+}
+
+#contact a {
+    color: #4C4C59;
+    text-decoration: underline;
+}
+
+#contact .address {
+    font-family: "Assistant Light";
+    font-size: 15px;
+    margin-top: 33px; /* ? */
+    direction: rtl;
+}
+
+#contact input {
+    height: 33px;
+}
+
+#contact textarea {
+    height: 157px;
+}
+
+#contact input, #contact textarea {
+    font-family: "Assistant";
+    font-size: 15px;
+    margin-bottom: 18px;
+    direction: rtl;
+    padding: 7px;
+    border: 1px solid #B3B3B3;
+    border-radius: 4px;
+}
+
+#contact input[name="phone"] {
+    width: 220px;
+}
+
+#contact input[name="name"] {
+    width: 253px;
+    margin-left: 13px; /* ? */
+}
+
+#contact input[name="email"] {
+    width: 100%;
+}
+
+#contact textarea[name="message"] {
+    width: 100%;
+}
+
+#contact .submit-button {
+    font-family: "Assistant";
+    font-size: 20px;
+    background: #30BEFF;
+    color: white;
+    width: 145px;
+    height: 44px;
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 6px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+#footer {
+    height: 115px;
+    background: #4C4C59;
+}
+
+#footer .copyright {
+    font-family: "Assistant Light";
+    font-size: 15px;
+    float: right;
+    direction: rtl;
+    color: white;
+    margin-top: 43px;
+    margin-right: 74px;
+}
+
+#footer .social-icons {
+    float: left;
+    margin-top: 41px;
+}
+
+#footer .social-icons .icon {
+    display: inline-block;
+    margin-right: 7px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.dialog {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(76, 76, 89, 0.5); /* ? */
+    z-index: 2;
+    display: none;
+}
+
+.dialog .content {
+    width: 354px;
+    height: 472px;
+    background: #4C4C59;
+    border-radius: 15px; /* ? */
+    display: inline-block;
+    position: relative;
+    margin-top: 100px;
+    color: white;
+    padding-top: 32px;
+    padding-bottom: 35px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.dialog .close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 15px; /* ? */
+    cursor: pointer;
+}
+
+#login-dialog h3 {
+    font-family: "Assistant Semi Bold";
+    font-size: 20px;
+    direction: rtl;
+}
+
+#login-dialog .sep {
+    border: 1px solid white;
+}
+
+#login-dialog .sep1 {
+    margin-top: 19px;
+    margin-bottom: 23px;
+}
+
+#login-dialog .sep2 {
+    margin-top: 26px;
+    margin-bottom: 21px;
+}
+
+.dialog .field {
+    position: relative;
+}
+
+.dialog .field .error {
+    color: #FF0000;
+    font-family: "Assistant";
+    font-size: 15px;
+    position: absolute;
+    left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 6px;
+    display: none;
+    background: white;
+}
+
+#login-dialog input {
+    width: 100%;
+    height: 35px;
+    border-radius: 7px;
+    direction: rtl;
+    padding-right: 10px;
+    border: 0px;
+}
+
+#login-dialog #login-email {
+    margin-bottom: 14px;
+}
+
+#login-dialog .button {
+    font-family: "Assistant Semi Bold";
+    font-size: 15px;
+    border-radius: 7px;
+    height: 30px;
+    margin-top: 18px;
+    padding-top: 3px;
+    cursor: pointer;
+    direction: rtl;
+}
+
+#login-dialog .button.primary {
+    background: #30BEFF;
+}
+
+#login-dialog h4 {
+    direction: rtl;
+    font-family: "Assistant";
+    font-size: 15px;
+}
+
+#login-dialog #register-button {
+    margin-top: 20px;
+}
+
+#login-dialog #facebook-button {
+    margin-top: 14px;
+    background: #3B5998;
+}
+
+#login-dialog #google-button {
+    margin-top: 14px;
+    background: #DD4B39;
+}
+
+#banner {
+    height: 531px;
+    color: white;
+}
+
+#banner .container {
+    height: 100%;
+    display: table;
+}
+
+#banner .space {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#banner .text {
+    display: table-cell;
+    vertical-align: middle;
+    width: 570px;
+}
+
+#category-page .header {
+    font-family: "Assistant Light";
+    font-size: 65px;
+    text-align: center;
+    direction: rtl;
+}
+
+#category-page .sub-header {
+    font-family: "Assistant Light";
+    font-size: 25px;
+    text-align: center;
+    direction: rtl;
+}
+
+#steps-section {
+    height: 207px;
+    background: #F2F2F2;
+}
+
+#steps-section .container {
+    display: table;
+    height: 100%;
+}
+
+#steps-section .steps-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#steps-section .steps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#steps-section .step {
+    flex-grow: 1;
+    flex-basis: 0px;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+#steps-section .step:after, #steps-section .step:before {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: -47px;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, #4C4C59 0%, #4C4C59 50%, transparent 50%, transparent 100%) repeat-x left bottom;
+    background-size: 32px 1px;
+    background-position: 50% 100%;
+}
+
+#steps-section .steps {
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+#steps-section .step:after {
+    left: auto;
+    right: 0;
+    margin: 0 -35px 0 0;
+}
+
+#steps-section .step:first-child:before {
+    display: none;
+}
+
+#steps-section .step:last-child:after {
+    display: none;
+}
+
+#steps-section .step .circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-block;
+    font-family: "Assistant Light";
+    font-size: 23px;
+    color: #4C4C59;
+    border: 3px solid #30BEFF;
+    text-align: center;
+    padding-top: 8px;
+    margin-bottom: 13px;
+    background: white;
+}
+
+#steps-section .step .text {
+    color: #4C4C59;
+    font-family: "Assistant Light";
+    font-size: 20px;
+}
+
+#steps-section .step:first-child {
+    margin-left: 0px;
+}
+
+#steps-section .step.active .circle {
+    background: #30BEFF;
+    color: white;
+}
+
+#category-page .products {
+    margin-top: 68.5px;
+    margin-bottom: 49px;
+    text-align: center;
+}
+
+#category-page .product {
+    width: 204px;
+    height: 204px;
+    margin-left: 29.5px;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+
+#product-page .header {
+    font-family: "Assistant Light";
+    font-size: 65px;
+    text-align: center;
+    direction: rtl;
+}
+
+#product-page .sub-header {
+    font-family: "Assistant Light";
+    font-size: 16px;
+    direction: rtl;
+}
+
+#product-page #price {
+    font-family: "Assistant Semi Bold";
+    font-size: 20px;
+    direction: rtl;
+}
+
+#product-page #form {
+    display: inline-block;
+    width: 929px;
+    margin-top: 62px;
+}
+
+#product-page #guide {
+    display: inline-block;
+    margin-top: 48px;
+    width: 171px;
+    background: #30BEFF;
+    border-radius: 4px;
+    color: white;
+    margin-left: 36px;
+    height: 342px;
+    padding-left: 11.5px;
+    padding-right: 11.5px;
+    vertical-align: top;
+}
+
+#product-page #guide .step-number {
+    font-family: "Assistant";
+    font-weight: bold;
+    font-size: 16px;
+    direction: rtl;
+    text-align: center;
+    margin-top: 14px;
+}
+
+#product-page #guide .step-name {
+    font-family: "Assistant";
+    font-size: 16px;
+    text-align: center;
+    direction: rtl;
+}
+
+#product-page #guide .progress-bar {
+    width: 146px;
+    margin-top: 14px;
+    margin-bottom: 15px;
+    border-radius: 11px;
+    display: inline-block;
+    background: transparent;
+    height: 22px;
+    border: 1px solid #E6E6E6;
+    position: relative;
+}
+
+#product-page #guide .progress-bar .progress {
+    background: white;
+    height: 22px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 11px;
+}
+
+#product-page #guide .progress-bar .text {
+    font-family: "Assistant";
+    font-size: 15px;
+    color: #4C4C59;
+    padding-left: 7px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#product-page #guide .help-text {
+    padding-top: 12px;
+    border-top: 1px solid white;
+    font-family: "Assistant Light";
+    font-size: 16px;
+    text-align: right;
+    line-height: 19px;
+    min-height: 205px; /* ? */
+    border-bottom: 1px solid white;
+    direction: rtl;
+}
+
+#product-page #finish-buttons {
+    text-align: left;
+    margin-top: 28px;
+}
+
+#product-page #finish-buttons .button {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    font-family: "Assistant";
+    font-size: 20px;
+    color: white;
+    padding-top: 5px;
+    display: inline-block;
+    height: 44px;
+}
+
+#product-page #finish-area {
+    display: inline-block;
+    text-align: right;
+    margin-top: 46px;
+    margin-right: 24px;
+}
+
+#product-page #finish-button {
+    background: #30BEFF;
+    width: 191px;
+}
+
+#product-page #save-button {
+    background: #4C4C59;
+    width: 224px;
+}
+
+#product-page #bottom-sep {
+    height: 1px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+    background: #F2F2F2;
+}
+
+#product-page #nav-buttons {
+    margin-bottom: 24px;
+}
+
+#product-page #next-button, #product-page #prev-button {
+    direction: rtl;
+    cursor: pointer;
+    font-family: "Assistant Semi Bold";
+    font-size: 20px;
+    color: #4C4C59;
+}
+
+#product-page #next-button {
+    float: left;
+}
+
+#product-page #prev-button {
+    float: right;
+}
+
+#product-page #prev-button.disabled {
+    opacity: 0.3;
+    cursor: context-menu;
+}
+
+#form .section {
+    font-size: 0px;
+}
+
+#form .section-group {
+    display: table;
+}
+
+#form .section-group .section {
+    display: table-cell;
+}
+
+#form .section-group .section:first-child {
+    padding-right: 37px;
+}
+
+#form .section-group .section:last-child {
+    padding-left: 37px;
+    border-left: 1px solid #F2F2F2;
+}
+
+#form .section-title {
+    text-align: right;
+    font-family: "Assistant Semi Bold";
+    font-size: 30px;
+    color: #30BEFF;
+    direction: rtl;
+}
+
+#form input, #form select {
+    height: 33px;
+    border-radius: 4px;
+    border: 1px solid #B3B3B3;
+    direction: rtl;
+    padding-right: 10px;
+    font-family: "Assistant";
+    font-size: 15px;
+    color: #4C4C59;
+    margin-left: 14px;
+}
+
+#form input:first-child {
+    margin-left: 0px;
+}
+
+#form .input-55 { width: 55px; }
+#form .input-90 { width: 90px; }
+#form .input-110 { width: 110px; }
+#form .input-130 { width: 130px; }
+#form .input-133 { width: 133px; }
+#form .input-136 { width: 136px; }
+#form .input-154 { width: 154px; }
+#form .input-192 { width: 192px; }
+#form .input-221 { width: 221px; }
+#form .input-418 { width: 418px; }
+#form .input-427 { width: 427px; }
+
+.m-b-13 { margin-bottom: 13px; }
+.m-b-14 { margin-bottom: 14px; }
+.m-b-15 { margin-bottom: 15px; }
+.m-b-17 { margin-bottom: 17px; }
+.m-b-23 { margin-bottom: 23px; }
+.m-b-24 { margin-bottom: 24px; }
+.m-b-28 { margin-bottom: 28px; }
+.m-b-35 { margin-bottom: 35px; }
+
+.m-t-13 { margin-top: 13px; }
+.m-t-14 { margin-top: 14px; }
+.m-t-15 { margin-top: 15px; }
+.m-t-17 { margin-top: 17px; }
+.m-t-23 { margin-top: 23px; }
+.m-t-24 { margin-top: 24px; }
+.m-t-28 { margin-top: 28px; }
+.m-t-35 { margin-top: 35px; }
+.m-t-70 { margin-top: 70px; }
+
+.p-t-13 { padding-top: 13px; }
+.p-t-14 { padding-top: 14px; }
+.p-t-15 { padding-top: 15px; }
+.p-t-17 { padding-top: 17px; }
+.p-t-23 { padding-top: 23px; }
+.p-t-24 { padding-top: 24px; }
+.p-t-28 { padding-top: 28px; }
+.p-t-35 { padding-top: 35px; }
+
+.p-b-13 { padding-bottom: 13px; }
+.p-b-14 { padding-bottom: 14px; }
+.p-b-15 { padding-bottom: 15px; }
+.p-b-17 { padding-bottom: 17px; }
+.p-b-23 { padding-bottom: 23px; }
+.p-b-24 { padding-bottom: 24px; }
+.p-b-28 { padding-bottom: 28px; }
+.p-b-35 { padding-bottom: 35px; }
+
+.m-l-0 { margin-left: 0px !important; }
+.m-l-5 { margin-left: 5px !important; }
+.m-l-7 { margin-left: 7px !important; }
+.m-l-8 { margin-left: 8px !important; }
+.m-l-9 { margin-left: 9px !important; }
+.m-l-10 { margin-left: 10px !important; }
+.m-l-14 { margin-left: 14px !important; }
+.m-l-15 { margin-left: 15px !important; }
+.m-l-17 { margin-left: 17px !important; }
+.m-l-22 { margin-left: 22px !important; }
+
+.m-r-0 { margin-right: 0px !important; }
+.m-r-5 { margin-right: 5px !important; }
+.m-r-7 { margin-right: 7px !important; }
+.m-r-10 { margin-right: 10px !important; }
+.m-r-14 { margin-right: 14px !important; }
+.m-r-15 { margin-right: 15px !important; }
+.m-r-17 { margin-right: 17px !important; }
+.m-r-22 { margin-right: 22px !important; }
+
+.height-149 { height: 149px; }
+.height-114 { height: 114px; }
+.height-50 { height: 50px; }
+
+.no-h-padding {  padding-left: 0px; padding-right: 0px; }
+
+.fs-16 { font-size: 16px; }
+.fs-10 { font-size: 10px; }
+.fs-11 { font-size: 11px; }
+.fs-12 { font-size: 12px; }
+.fs-14 { font-size: 14px; }
+
+.vt { vertical-align: top; }
+
+#form .section-text {
+    font-family: "Assistant";
+    font-size: 18px;
+    color: #4C4C59;
+    direction: rtl;
+}
+
+#form .section-text input, #form .section-text select {
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+#product-page .product-step:not(.active) {
+    display: none;
+}
+
+#form input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: white;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: middle;
+    border: 1px solid #4C4C59;
+    margin-top: -2px;
+}
+
+#form input[type="checkbox"]:checked::before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    margin-right: -11px;
+    display: block;
+    margin-top: -5px;
+}
+
+#form .checkbox-list input[type="checkbox"] {
+    margin-left: 3px; /* ? */
+}
+
+#form label {
+    direction: rtl;
+}
+
+#form input.text-center {
+    padding-right: 0px;
+}
+
+#form .section-sub-title {
+    direction: rtl;
+    font-family: "Assistant Semi Bold";
+    font-size: 20px;
+}
+
+#form .checkbox-list {
+    font-size: 14px;
+}
+
+#form .checkbox-list label {
+    margin-left: 29px;
+}
+
+#form textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #B3B3B3;
+    direction: rtl;
+    padding-right: 10px;
+    font-family: "Assistant";
+    font-size: 15px;
+    color: #4C4C59;
+}
+
+#form a {
+    text-decoration: underline;
+    color: #4C4C59;
+}
+
+#form .button {
+    cursor: pointer;
+    height: 33px;
+    border-radius: 4px;
+    background: #4C4C59;
+    color: white;
+    padding-top: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 16px;
+}
+
+#form input.error,
+#form select.error,
+#form textarea.error,
+#form label.error input {
+    border: 1px solid red;
+}
+
+#form label.error, #form label.error a {
+    color: red;
+}
+
+#form .upload-area .files .pending,
+#form .upload-area .files .file {
+    margin-top: 10px;
+}
+
+#form .upload-area .files .pending {
+    direction: rtl;
+}
+
+#form .upload-area .file .delete-button {
+    display: none;
+}
+
+#form .upload-area .file:hover .delete-button {
+    display: inline-block;
+}
+
+#form .outline-button {
+    height: 33px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #B3B3B3;
+    font-family: "Assistant";
+    font-size: 20px;
+    color: #4C4C59;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#form .outline-button.square {
+    width: 33px;
+}
+
+#form .outline-button.disabled,
+#form .disabled .outline-button {
+    opacity: 0.3;
+    cursor: context-menu;
+}
+
+#form .recurring-sample {
+    display: none;
+}
+
+.display-none { display: none; }
+
+.bb-gray { border-bottom: 1px solid #F2F2F2; }
+.bt-gray { border-top: 1px solid #F2F2F2; }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    background: #30BEFF;
+}
+
+#form .section-group .section:first-child {
+    min-width: 455px;
+}
+#form .section-group .section:last-child {
+    min-width: 465px;
+}
+
+#form .full-width {
+    width: 100%;
+}
+
+.recurring[data-min-items="1"] .recurring-item:first-child .recurring-remove-button {
+    display: none !important;
+}
+
+#terms-page .title {
+    font-weight: bold;
+    direction: rtl;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+#terms-page p, #terms-page ol {
+    direction: rtl;
+    margin-bottom: 15px;
+}
+
+#terms-page a {
+    text-decoration: underline;
+}
+
+#terms-page .container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.all-vertical-top * {
+    vertical-align: top;
+}
+
+.upload-area .files.short .pending,
+.upload-area .files.short .file {
+    width: 150px;
+}
+
+.upload-area .files.short .fa-file {
+    display: none;
+}

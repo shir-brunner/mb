@@ -1,0 +1,2 @@
+ALTER TABLE `client_index` CHANGE `client_index_first_value` `client_index_first_value` FLOAT NULL;
+ALTER TABLE `client_index` CHANGE `client_index_value` `client_index_value` FLOAT NULL;
